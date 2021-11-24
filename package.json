@@ -1,0 +1,16 @@
+{
+  "name": "keyboardmaestro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bplist-parser": "^0.3.0",
+    "open": "^8.2.1",
+    "touchportal-api": "^2.4.0-beta.4"
+  }
+}
