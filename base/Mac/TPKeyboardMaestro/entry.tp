@@ -1,0 +1,45 @@
+{
+    "sdk": 3,
+    "version": 1000,
+    "TPDiscord_Version": "1.0.0",
+    "name": "Touch Portal Keyboard Maestro Plugin",
+    "id": "TouchPortal_Keyboard_Maestro",
+    "plugin_start_cmd": "sh %TP_PLUGIN_FOLDER%TPKeyboardMaestro/start.sh tpkeyboardmaestro",
+    "configuration": {
+        "colorDark": "#440044",
+        "colorLight": "#FF00FF"
+    },
+    "categories": [
+        {
+            "id": "TPKeyboardMaestroCategory",
+            "name": "Keyboard Maestro",
+            "imagepath": "%TP_PLUGIN_FOLDER%TPKeyboardMaestro/logo.png",
+            "actions": [
+                {
+                    "id": "keyboard_maestro.run_macro",
+                    "prefix": "Keyboard Maestro:",
+                    "name": "Run Macro",
+                    "type": "communicate",
+                    "tryInline": "true",
+                    "format": "Keyboard Maestro: Run Macro {$keyboard_maestro.states.macro$} with arguments {$keyboard_maestro.states.argument$}",
+                    "data": [
+                        {
+                            "id": "keyboard_maestro.states.macro",
+                            "type": "choice",
+                            "label": "Shorcut",
+                            "default": "",
+                            "valueChoices": [
+                            ]
+                        },
+                        {
+                            "id": "keyboard_maestro.states.argument",
+                            "type": "text",
+                            "label": "Arguments",
+                            "default": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

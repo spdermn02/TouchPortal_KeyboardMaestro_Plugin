@@ -1,13 +1,27 @@
 {
-  "name": "keyboardmaestro",
+  "name": "tpkeyboardmaestro",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Touch Portal Plugin for Keyboard Maestro",
+  "main": "src/index.js",
+  "bin": {
+    "tpkeyboardmaestro": "src/index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "node src/index.js",
+    "pkg": "pkg .",
+    "pkg-mac": "pkg --targets node14-macos-x64 .",
+    "build-mac": "run-script-os",
+    "build-mac:linux:darwin": "pkg --targets node14-macos-x64 . && mv tpkeyboardmaestro base/Mac/TPKeyboardMaestro && rm -rf Installers/TPKeyboardMaestro-Mac.tpp && cd base/Mac && zip -r ../../Installers/TPKeyboardMaestro-Mac.tpp TPKeyboardMaestro && rm -rf TPKeyboardMaestro/tpkeyboardmaestro"
+  },
+  "author": "Jameson Allen aka Spdermn02",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin/issues"
+  },
+  "homepage": "https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin#readme",
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
+  },
   "dependencies": {
     "bplist-parser": "^0.3.0",
     "open": "^8.2.1",
