@@ -12,7 +12,7 @@
 
 This plugin is for MacOS Only. [Keyboard Maestro](https://www.keyboardmaestro.com/main/) is a program that can "automate applications or web sites, text or images, simple or complex, on command or scheduled. You can automate virtually anything." (pulled from Keyboard Maestro Website).
 
-This plugin is not created by, nor supported by Keyboard Maestro. Any questions/concerns should be directed through the [Github Issues](issues) or through the #keyboard-maestro channel on the [Official Touch Portal Discord](https://discord.gg/MgxQb8r)
+This plugin is not created by, nor supported by Keyboard Maestro. Any questions/concerns should be directed through the [Github Issues](/issues) or through the #keyboard-maestro channel on the [Official Touch Portal Discord](https://discord.gg/MgxQb8r)
 
 ## Requirements
 
@@ -22,7 +22,7 @@ This plugin is not created by, nor supported by Keyboard Maestro. Any questions/
 - [Keyboard Maestro](https://www.keyboardmaestro.com/main/)
 
 ## Instructions
-1) Download the .tpp file from the [Release](releases) page
+1) Download the .tpp file from the [Release](/releases) page
 2) In Touch Portal select the Wrench icon and `Import plug-in`
 3) Navigate to where the .tpp file was downloaded and select it, click `Ok`
 4) Upon first import it will present you 2 dialogs
@@ -38,7 +38,7 @@ This plugin is not created by, nor supported by Keyboard Maestro. Any questions/
 
 ## Bugs
 
-Issues and Bugs can be reported through [GitHub Issues](issues) or through the [Official Touch Portal Discord](https://discord.gg/MgxQb8r) and channel #keyboard-maestro
+Issues and Bugs can be reported through [GitHub Issues](/issues) or through the [Official Touch Portal Discord](https://discord.gg/MgxQb8r) and channel #keyboard-maestro
 
 ## Author
 
