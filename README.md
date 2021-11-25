@@ -4,9 +4,11 @@
   - [Intro](#intro)
   - [Requirements](#requirements)
   - [Instructions](#instructions)
-  - [Bugs](#bugs)
-  - [Author](#author)
-  - [License](#license)
+- [Bugs/Ehancements](#bugsehancements)
+- [Dependencies](#dependencies)
+- [Versioning](#versioning)
+- [Authors](#authors)
+- [License](#license)
 
 ## Intro
 
