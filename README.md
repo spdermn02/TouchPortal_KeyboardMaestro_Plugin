@@ -50,7 +50,7 @@ Issues and Bugs can be reported through [GitHub Issues](https://github.com/spder
 
 
 # Dependencies
- - [dbplist-parser](https://www.npmjs.com/package/bplist-parser)
+ - [bplist-parser](https://www.npmjs.com/package/bplist-parser)
  - [touchportal-api](https://www.npmjs.com/package/touchportal-api)
 
 # Versioning
