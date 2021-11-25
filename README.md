@@ -27,12 +27,16 @@ This plugin is not created by, nor supported by Keyboard Maestro. Any questions/
 3) Navigate to where the .tpp file was downloaded and select it, click `Ok`
 4) Upon first import it will present you 2 dialogs
    1) One says `Plug-in imported successful` Click `OK` button
+   
    ![PluginSuccessImage](resources/images/PluginSuccess.png)
+
    2) On the one that asks for trust, if you click `OK` it will ask again when Touch Portal is reopened. Chosing `Trust Always` will prevent this popup coming up again.
 5) If this is your first Touch Portal plugin, please fully quit and start Touch Portal
 6) Click on the button you want to add the action to, scroll down to Keyboard Maestro and click `Run Macro` to add the action
+
    ![RunMacroActionSelect](resources/images/RunMacro-Action-Select.png)
 7) Select the macro you want to execute from the list that is provided, and click `Save`
+
 ![RunMacroAction](resources/images/RunMacro-Action.png)
 8) Congrats you now can execute a Keyboard Maestro macro directly from touchportal. Or several in a row, it's up to you!
 
