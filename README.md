@@ -42,14 +42,23 @@ This plugin is not created by, nor supported by Keyboard Maestro. Any questions/
 
 8) Congrats you now can execute a Keyboard Maestro macro directly from touchportal. Or several in a row, it's up to you!
 
-## Bugs
+# Bugs/Ehancements
 
 Issues and Bugs can be reported through [GitHub Issues](https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin/issues) or through the [Official Touch Portal Discord](https://discord.gg/MgxQb8r) and channel #keyboard-maestro
 
-## Author
 
-Jameson Allen aka Spdermn02
+# Dependencies
+ - [dbplist-parser](https://www.npmjs.com/package/bplist-parser)
+ - [touchportal-api](https://www.npmjs.com/package/touchportal-api)
 
-## License
+# Versioning
 
-[MIT](LICENSE)
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/spdermn02/tpohm_plugin/tags).
+
+# Authors
+
+- **Jameson Allen** - _Initial work_ - [Spdermn02](https://github.com/spdermn02)
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
