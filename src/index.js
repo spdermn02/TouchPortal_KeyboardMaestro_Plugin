@@ -5,6 +5,7 @@ const open = require('open');
 
 const pluginId = 'TouchPortal_Keyboard_Maestro';
 const updateUrl = "https://raw.githubusercontent.com/spdermn02/TouchPortal_Keyboard_Maestro_Plugin/main/package.json";
+const releaseUrl = "https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin/releases";
 
 let settings = {};
 const PLIST_FILE = process.env.HOME + '/Library/Application Support/Keyboard Maestro/Keyboard Maestro Macros.plist';
@@ -50,13 +51,23 @@ const readKeyboardMaestroPlist = async () => {
 
 };
 
-const updateTouchPortalStates = () => {
-    
-};
-
 const getMacroUIDByName = (macroName) => {
     return macros[macroName].UID ?? undefined;
 }
+
+TPClient.on("Update", (curVersion, newVersion) => {
+  logIt("DEBUG","Update: current version:"+curVersion+" new version:"+newVersion);
+  TPClient.sendNotification(`${pluginId}_update_notification`,`Keyboard Maestro Plugin Update Available (${newVersion})`,
+    `\nPlease updated to get the latest bug fixes and new features\n\nCurrent Installed Version: ${curVersion}`,
+    [{id: `${pluginId}_update_notification_go_to_download`, title: "Go To Download Location" }]
+  );
+});
+
+TPClient.on("NotificationClicked", (data) => {
+  if( data.optionId === `${pluginId}_update_notification_go_to_download`) {
+    open(releaseUrl);
+  }
+});
 
 TPClient.on("Action", (message) => {
     if (message.actionId === "keyboard_maestro.run_macro") {
@@ -78,8 +89,8 @@ TPClient.on("Action", (message) => {
 });
 
 TPClient.on("Broadcast", () => {
-    logIt('DEBUG', 'Received Broadcast Message, sending all states again');
-    updateTouchPortalStates();
+    // Let's not log anything until we actually need to
+    // logIt('DEBUG', 'Received Broadcast Message, sending all states again');
 });
 
 // Touch Portal Client Setup
