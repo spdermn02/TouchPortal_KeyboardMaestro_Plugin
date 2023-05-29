@@ -1,22 +1,30 @@
 # Touch Portal Keyboard Maestro Plugin
 
 - [Touch Portal Keyboard Maestro Plugin](#touch-portal-keyboard-maestro-plugin)
-  - [Intro](#intro)
-  - [Requirements](#requirements)
-  - [Instructions](#instructions)
+- [Intro](#intro)
+- [Change Log](#changelog)
+- [Requirements](#requirements)
+- [Instructions](#instructions)
 - [Bugs/Ehancements](#bugsehancements)
 - [Dependencies](#dependencies)
 - [Versioning](#versioning)
 - [Authors](#authors)
 - [License](#license)
 
-## Intro
+# Intro
 
 This plugin is for MacOS Only. [Keyboard Maestro](https://www.keyboardmaestro.com/main/) is a program that can "automate applications or web sites, text or images, simple or complex, on command or scheduled. You can automate virtually anything." (pulled from Keyboard Maestro Website).
 
 This plugin is not created by, nor supported by Keyboard Maestro. Any questions/concerns should be directed through the [Github Issues](https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin/issues) or through the #keyboard-maestro channel on the [Official Touch Portal Discord](https://discord.gg/MgxQb8r)
 
-## Requirements
+# Change Log
+v1.0.0 - Initial Release
+v1.0.1 - Bug Fixes
+  - Reported by [jerayan](https://github.com/jerayan) 
+   - Issue with using km macro with paramters, not triggering due to mistyped variabel name
+   - refactor of macro action array check to make sure it's valid before attempting to use it
+
+# Requirements
 
 - MacOS
 - Touch Portal Pro Upgrade - Purchasable through iOS or Android Touch Portal App
@@ -60,6 +68,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 # Authors
 
 - **Jameson Allen** - _Initial work_ - [Spdermn02](https://github.com/spdermn02)
+- **Dominik Svoboda** - Bug Fixes - [jerayan](https://github.com/jerayan)
 
 # License
 

@@ -1,6 +1,6 @@
 {
   "name": "tpkeyboardmaestro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Touch Portal Plugin for Keyboard Maestro",
   "main": "src/index.js",
   "bin": {
@@ -23,7 +23,7 @@
     "run-script-os": "^1.1.6"
   },
   "dependencies": {
-    "bplist-parser": "^0.3.0",
+    "bplist-parser": "^0.3.2",
     "open": "^8.2.1",
     "touchportal-api": "^2.4.0-beta.4"
   }
