@@ -28,31 +28,30 @@ const readKeyboardMaestroPlist = async () => {
             if( macro.hasOwnProperty('Name')) {
                 macroName = macro.Name;
             }
-            else if( macro.Actions[0].hasOwnProperty("ActionName")) {
-                macroName = macro.Actions[0].ActionName;
-            }    
-            else if (macro.Actions[0].hasOwnProperty("Title")) {
-                macroName = macro.Actions[0].Title;
+            else if( macro.Actions[0[ && typeof macro.Actions[0] === 'object' ) {
+                if( macro.Actions[0].hasOwnProperty("ActionName")) {
+                    macroName = macro.Actions[0].ActionName;
+                }    
+                else if (macro.Actions[0].hasOwnProperty("Title")) {
+                    macroName = macro.Actions[0].Title;
+                }
+                else if (macro.Actions[0].hasOwnProperty("MacroActionType") ) {
+                    macroName = macro.Actions[0].MacroActionType;
+                }
             }
-            else if (macro.Actions[0].hasOwnProperty("MacroActionType") ) {
-                macroName = macro.Actions[0].MacroActionType;
-            }
-            //console.log(macroName);
+
             macros[macroName] = { 'UID': macro.UID };
             groups[group.Name].macros[macroName] = macros[macroName];
         })
     });
-    //console.log(JSON.stringify(macros, null, 2));
-    //console.log(JSON.stringify(groups, null, 2));
+
     TPClient.choiceUpdate("keyboard_maestro.states.macro", 
         Object.keys(macros).sort());
 
 };
 
-
-
 const updateTouchPortalStates = () => {
-
+    
 };
 
 const getMacroUIDByName = (macroName) => {
@@ -72,7 +71,7 @@ TPClient.on("Action", (message) => {
 
         let callUri = `${KMTRIGGER_URI}${macroUID}`;
         if( value != undefined && value != '' ) {
-            callUri = `${call_uri}&value=${value}`;
+            callUri = `${callUri}&value=${value}`;
         }
         open(callUri);
     }
