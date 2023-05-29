@@ -29,7 +29,7 @@ const readKeyboardMaestroPlist = async () => {
             if( macro.hasOwnProperty('Name')) {
                 macroName = macro.Name;
             }
-            else if( macro.Actions[0[ && typeof macro.Actions[0] === 'object' ) {
+            else if( macro.Actions[0] && typeof macro.Actions[0] === 'object' ) {
                 if( macro.Actions[0].hasOwnProperty("ActionName")) {
                     macroName = macro.Actions[0].ActionName;
                 }    
