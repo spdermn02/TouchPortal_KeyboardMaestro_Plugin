@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "bplist-parser": "^0.3.2",
-    "open": "^10.1.0",
-    "touchportal-api": "^4.0.0"
+    "open": "^8.2.1",
+    "touchportal-api": "^2.4.0-beta.4"
   }
 }
