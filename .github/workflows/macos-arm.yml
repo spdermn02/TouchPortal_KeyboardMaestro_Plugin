@@ -21,7 +21,12 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
     - run: npm install --global pkg
+    - run: npm install
     - run: npm ci
     - run: npm run build-mac-arm
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: TouchPortal_KeyboardMaestro_Plugin
+        path: Installers/TPKeyboardMaestro-Mac.tpp
