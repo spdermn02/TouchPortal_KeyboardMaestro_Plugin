@@ -3,6 +3,9 @@ const TPClient = new (require("touchportal-api").Client)();
 const fs = require('fs');
 const open = require('open');
 
+// Force larger number of allowed objects
+bplist.maxObjectCount = 999999; //default in code is 32768
+
 const pluginId = 'TouchPortal_Keyboard_Maestro';
 const updateUrl = "https://raw.githubusercontent.com/spdermn02/TouchPortal_Keyboard_Maestro_Plugin/main/package.json";
 const releaseUrl = "https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin/releases";
