@@ -9,9 +9,10 @@
   "scripts": {
     "start": "node src/index.js",
     "pkg": "pkg .",
-    "pkg-mac": "pkg --targets node14-macos-x64 .",
+    "pkg-mac": "pkg --targets node16-macos-x64 .",
     "build-mac": "run-script-os",
-    "build-mac:linux:darwin": "pkg --targets node14-macos-x64 . && mv tpkeyboardmaestro base/Mac/TPKeyboardMaestro && rm -rf Installers/TPKeyboardMaestro-Mac.tpp && cd base/Mac && zip -r ../../Installers/TPKeyboardMaestro-Mac.tpp TPKeyboardMaestro && rm -rf TPKeyboardMaestro/tpkeyboardmaestro"
+    "build-mac:linux:darwin": "pkg --targets node16-macos-x64 . && mv tpkeyboardmaestro base/Mac/TPKeyboardMaestro && rm -rf Installers/TPKeyboardMaestro-Mac.tpp && cd base/Mac && zip -r ../../Installers/TPKeyboardMaestro-Mac.tpp TPKeyboardMaestro && rm -rf TPKeyboardMaestro/tpkeyboardmaestro",
+    "build-mac-arm": "pkg --targets node16-macos-arm64 . && mv tpkeyboardmaestro base/Mac/TPKeyboardMaestro && rm -rf Installers/TPKeyboardMaestro-Mac.tpp && cd base/Mac && zip -r ../../Installers/TPKeyboardMaestro-Mac.tpp TPKeyboardMaestro && rm -rf TPKeyboardMaestro/tpkeyboardmaestro"
   },
   "author": "Jameson Allen aka Spdermn02",
   "license": "MIT",
@@ -20,11 +21,12 @@
   },
   "homepage": "https://github.com/spdermn02/TouchPortal_KeyboardMaestro_Plugin#readme",
   "devDependencies": {
+    "pkg": "^5.8.1",
     "run-script-os": "^1.1.6"
   },
   "dependencies": {
     "bplist-parser": "^0.3.2",
-    "open": "^8.2.1",
-    "touchportal-api": "^2.4.0-beta.4"
+    "open": "^10.1.0",
+    "touchportal-api": "^4.0.0"
   }
 }
